@@ -13,8 +13,8 @@ engine.setProperty('voice', voices[1].id)
 
 data_dictionary = {
     "collaborators":["India Meteorological Department", "imd", "aibp", "Himachal Pradesh Forest Department",
-                 "Karnataka Forest Department", "Ludhiana Municipal Corporation", "Punjab Remote Sensing Centre",
-                 "Punjab Heritage & Tourism Promotion Board", "national remote sensing center"],
+                "Karnataka Forest Department", "Ludhiana Municipal Corporation", "Punjab Remote Sensing Centre",
+                "Punjab Heritage & Tourism Promotion Board", "national remote sensing center"],
     "viewer" : ["Field Data Viewer","mgnrega","bhuvan-mgnrega"],
 "darta":['Archives ','Ordering Satellite Data','Super Site','Remote Sensing Analysis','NRSC data','ISRO data','Open data'],
 "dimen":["bhuvan 2d", "isro 2d","2d world map","2d map",],
@@ -142,6 +142,8 @@ categories = [
     ("hospi","https://bhuvan-app1.nrsc.gov.in/ntr/"),
 ]
 
+def main():
+    return 'abcd';
     
 if __name__ == "__main__":                      # last running programm
     wishme()   
