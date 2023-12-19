@@ -142,6 +142,8 @@ categories = [
     ("hospi","https://bhuvan-app1.nrsc.gov.in/ntr/"),
 ]
 
+def main():
+    return 'abcd';
     
 if __name__ == "__main__":                      # last running programm
     wishme()   

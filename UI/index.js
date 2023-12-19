@@ -9,9 +9,10 @@ let headPhone = document.getElementById("headPhone");
 
     let result = document.getElementById("result");
 
-    result.onclick = (event) => {
+    result.onclick = async (event) => {
         if(headPhone.classList.contains("pulse")) { 
-            return headPhone.classList.remove("pulse");
+            headPhone.classList.remove("pulse");
+            await stopRecording(event);
         }
         return headPhone.classList.add('pulse');
     }
@@ -37,6 +38,8 @@ let headPhone = document.getElementById("headPhone");
     }
 
     function stopRecording() {
+        console.log(mediaRecorder)
+        console.log(mediaRecorder.state)
         if (mediaRecorder && mediaRecorder.state === 'recording') {
             mediaRecorder.stop();
         }
@@ -51,16 +54,18 @@ let headPhone = document.getElementById("headPhone");
             alert('No audio data recorded.');
         }
     }
-function sendAudioToServer(blob) {
+    function sendAudioToServer(blob) {
         const formData = new FormData();
         formData.append('audio', blob, 'recording.wav');
 
-        fetch('/process_audio', {
+        fetch('http://127.0.0.1:3001/processAudio', {
             method: 'POST',
             body: formData,
         })
         .then(response => response.json())
         .then(data => {
             document.getElementById('result').innerHTML = 'Result: ' + data.result;
+        }).catch((err) => {
+            console.error(err);
         });
     }

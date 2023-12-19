@@ -1,4 +1,6 @@
-# Define a set of test cases with expected results
+import matplotlib.pyplot as plt
+import numpy as np
+
 data_dictionary = {
     "collaborators":["India Meteorological Department", "imd", "aibp", "Himachal Pradesh Forest Department",
                  "Karnataka Forest Department", "Ludhiana Municipal Corporation", "Punjab Remote Sensing Centre",
@@ -95,8 +97,6 @@ print("Confusion Matrix:")
 print("True Positives (TP):", tp)
 print("False Positives (FP):", fp)
 print("False Negatives (FN):", fn)'''
-import matplotlib.pyplot as plt
-import numpy as np
 
 # Define a set of test cases with expected results
 test_cases = [
