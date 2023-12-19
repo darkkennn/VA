@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> SnappyAI</title>
+    <link rel="stylesheet" href="main.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo"> snappy ai </a>
+        <ul>
+            <li><a href="http://127.0.0.1:5500/bhuvanproj/website/main.html" class="active">Home</a></li>
+            <li><a href="http://127.0.0.1:5500/bhuvanproj/website/login.html">Login</a></li>
+        </ul>
+    </header>
+    <section>
+        <div class="sad" id="headPhone">
+            <span style="--i:0"></span>
+            <span style="--i:1"></span>
+            <span style="--i:2"></span>
+            <span style="--i:3"></span>
+            <img src="fit.png" alt="fit">
+        </div>
+
+        <div class="voice" id="result">
+        <button id="button1" onclick="startRecording()">Start Recording</button>
+        <button id="button2" onclick="stopRecording()">Stop Recording</button>
+        <button id="button3" onclick="processAudio()">Process Audio</button>
+        </div>
+    
+    </section>
+    <form action="" method="get">
+    <div class="input-box">
+        <input type="text" placeholder="Message SnappyAI">
+        <button type="submit" class="btn">
+        <i class='bx bxs-send' ></i>
+        <box-icon type='solid' name='lock'></box-icon></button>
+    </div>
+</form>
+
+    <script type='text/javascript' src="index.js"></script>  
+
+</body>
+</html>
