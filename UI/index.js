@@ -12,7 +12,7 @@ let headPhone = document.getElementById("headPhone");
     result.onclick = async (event) => {
         if(headPhone.classList.contains("pulse")) { 
             headPhone.classList.remove("pulse");
-            await stopRecording(event);
+            stopRecording(event);
         }
         return headPhone.classList.add('pulse');
     }
